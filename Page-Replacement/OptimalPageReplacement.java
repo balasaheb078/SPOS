@@ -62,6 +62,13 @@ public class OptimalPageReplacement {
                 }
             }
 
+            // Print frames at each step
+            System.out.print("Frames: ");
+            for (Integer frame : frames) {
+                System.out.print(frame + " ");
+            }
+            System.out.println();
+
             // Update the next occurrence of each page in frames
             for (int j = 0; j < frames.size(); j++) {
                 int nextPage = frames.get(j);
@@ -83,11 +90,30 @@ public class OptimalPageReplacement {
     }
 }
 
-
 /*
  Enter the number of frames: 4
 Enter the number of pages: 20
 Enter the reference string (space-separated): 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+Frames: 7
+Frames: 7 0
+Frames: 7 0 1
+Frames: 7 0 1 2
+Frames: 7 0 1 2
+Frames: 0 1 2 3
+Frames: 0 1 2 3
+Frames: 0 2 3 4
+Frames: 0 2 3 4 
+Frames: 0 2 3 4
+Frames: 0 2 3 4
+Frames: 0 2 3 4
+Frames: 0 2 3 4
+Frames: 0 2 4 1
+Frames: 0 2 4 1
+Frames: 0 2 4 1
+Frames: 0 2 4 1
+Frames: 0 4 1 7
+Frames: 0 4 1 7
+Frames: 0 4 1 7
 Page hits: 12
 Page faults: 8
  */
