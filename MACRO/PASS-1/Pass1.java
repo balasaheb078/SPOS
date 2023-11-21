@@ -120,3 +120,19 @@ public class Pass1 {
         writer.newLine();
     }
 }
+
+//input.txt
+
+/*
+START 100
+MACRO
+ADDR &DATA1,&DATA2
+MOVER AREG,10
+MOVER AREG,DATA1
+ADD AREG,DATA2
+MOVEM AREG,DATA2
+MEND
+LTORG
+ADDR 10,20
+END
+    */
